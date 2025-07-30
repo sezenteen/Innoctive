@@ -1,7 +1,137 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Card from "../components/Card.jsx";
+import CardCarousel from "../components/CardCarousel.jsx";
+
+const cardData = [
+	{
+		title: "Project A",
+		description: "Description for Project A",
+		image: "/images/project-a.jpg",
+		link: "/projects/project-a",
+	},
+	{
+		title: "Project B",
+		description: "Description for Project B",
+		image: "/images/project-b.jpg",
+		link: "/projects/project-b",
+	},
+	{
+		title: "Project C",
+		description: "Description for Project C",
+		image: "/images/project-c.jpg",
+		link: "/projects/project-c",
+	},
+];
 ---
 
-<BaseLayout>
-	
+<BaseLayout title="Home">
+	<main class="container mx-auto py-12 px-4">
+		<h1>Welcome to DoMore Mongolia</h1>
+		<p class="mb-8">Explore our latest projects and initiatives.</p>
+
+		<!-- <CardCarousel cards={cardData} client:load /> -->
+
+		<section
+			class="relative h-screen flex items-center justify-center text-white text-center bg-cover bg-center"
+			style="background-image: url('/images/hero-volunteer.jpg');"
+		>
+			<div class="absolute inset-0 bg-black opacity-50"></div>
+			{/* Overlay for text readability */}
+			<div class="z-10 p-6 md:p-10">
+				<h1
+					class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight"
+				>
+					Be the Change You Wish to See
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
+					Join a community of passionate volunteers making a real
+					difference in Mongolia and beyond.
+				</p>
+				<a
+					href="/opportunities"
+					class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out shadow-lg"
+				>
+					Explore Volunteer Opportunities
+				</a>
+			</div>
+		</section>
+
+		<section class="py-16 bg-white text-gray-800">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-8">
+					Our Mission: Empowering Communities Through Action
+				</h2>
+				<p class="text-lg md:text-xl max-w-3xl mx-auto mb-12">
+					We connect dedicated volunteers with meaningful causes,
+					driving positive change in areas like education,
+					environmental protection, health, and social welfare. Every
+					hour you give builds a stronger, more compassionate society.
+				</p>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="p-6 bg-gray-50 rounded-lg shadow-md">
+						<h3 class="text-5xl font-extrabold text-blue-600 mb-2">
+							500+
+						</h3>
+						<p class="text-lg font-semibold">Lives Impacted</p>
+					</div>
+					<div class="p-6 bg-gray-50 rounded-lg shadow-md">
+						<h3 class="text-5xl font-extrabold text-green-600 mb-2">
+							1,200+
+						</h3>
+						<p class="text-lg font-semibold">Volunteer Hours</p>
+					</div>
+					<div class="p-6 bg-gray-50 rounded-lg shadow-md">
+						<h3
+							class="text-5xl font-extrabold text-purple-600 mb-2"
+						>
+							20+
+						</h3>
+						<p class="text-lg font-semibold">Active Projects</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="py-16 bg-white text-gray-800">
+			<div class="container mx-auto px-4 text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-10">
+					Hear From Our Volunteers
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div
+						class="p-6 bg-blue-50 rounded-lg shadow-md border-l-4 border-blue-600"
+					>
+						<p class="text-lg italic mb-4">
+							"Volunteering with [Your Organization Name] has been
+							incredibly rewarding. I've met amazing people and
+							seen the direct impact of our work on the
+							community."
+						</p>
+						<p class="font-semibold">
+							- Khulan, Environmental Cleanup Volunteer
+						</p>
+					</div>
+					<div
+						class="p-6 bg-green-50 rounded-lg shadow-md border-l-4 border-green-600"
+					>
+						<p class="text-lg italic mb-4">
+							"I never thought I could make such a difference.
+							Teaching children has given me a new sense of
+							purpose and joy. Highly recommend!"
+						</p>
+						<p class="font-semibold">
+							- Batbayar, Education Support Volunteer
+						</p>
+					</div>
+				</div>
+				<a
+					href="/stories"
+					class="mt-12 inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out"
+				>
+					Read More Stories
+				</a>
+			</div>
+		</section>
+	</main>
 </BaseLayout>
