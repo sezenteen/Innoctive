@@ -4,126 +4,105 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout title="DoMore Mongolia">
   <main class="container mx-auto py-8 px-4">
-    <!-- Hero Section -->
+    <!-- Hero Section with Slideshow -->
     <section
-      class="relative min-h-[75vh] flex flex-col md:flex-row items-center justify-center bg-gradient-to-br from-blue-800 to-blue-950 text-white overflow-hidden rounded-3xl shadow-xl mt-4 mx-4 md:mx-auto"
+      class="relative min-h-[75vh] flex flex-col items-center justify-center text-white overflow-hidden rounded-3xl shadow-xl mt-4 mx-4 md:mx-auto"
     >
-      <div
-        class="relative w-full md:w-1/2 h-80 md:h-auto md:min-h-[75vh] flex-shrink-0"
-      >
+      <!-- Background Image Slideshow -->
+      <div id="hero-slider-container" class="absolute inset-0 w-full h-full">
         <img
+          id="hero-background-image"
           src="../image/hero-volunteer.jpg"
           alt="Volunteers working together"
-          class="object-cover object-center w-full h-full rounded-t-3xl md:rounded-l-3xl md:rounded-tr-none"
+          class="object-cover object-center w-full h-full transition-opacity duration-1000 ease-in-out"
           loading="eager"
         />
-        <div
-          class="absolute inset-0 bg-black opacity-50 rounded-t-3xl md:hidden"
-        ></div>
+        <!-- Dark overlay for text readability -->
+        <div class="absolute inset-0 bg-black opacity-50"></div>
       </div>
 
+      <!-- Hero Content -->
       <div
-        class="relative z-10 w-full md:w-1/2 p-8 md:p-12 lg:p-16 text-center md:text-left flex flex-col items-center md:items-start justify-center"
+        class="relative z-10 p-8 md:p-12 lg:p-16 text-center max-w-2xl mx-auto flex flex-col items-center justify-center"
       >
         <h1
           class="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 leading-tight drop-shadow-md"
         >
           Be the Change You Wish to See
         </h1>
-        <p class="text-lg md:text-xl mb-8 max-w-xl opacity-90">
-          Join a vibrant community of passionate volunteers making a real
-          difference in Mongolia's future.
+        <p class="text-lg md:text-2xl mb-8 opacity-90 animate-pulse">
+          Бидэнтэй нэгдэж нийгэмдээ эерэг өөрчлөлт авчрах мянга мянган залуусын нэг болоорой.
         </p>
         <a
           href="/opportunities"
           class="bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
         >
-          Explore Volunteer Opportunities
+          Сайн дурын ажил сонирхох
         </a>
+      </div>
+
+      <!-- Hero Slider Navigation Buttons -->
+      <button
+        id="hero-prev-slide"
+        class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white z-20"
+        aria-label="Previous hero image"
+      >
+        &#10094;
+      </button>
+      <button
+        id="hero-next-slide"
+        class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/30 hover:bg-white/50 text-white p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-white z-20"
+        aria-label="Next hero image"
+      >
+        &#10095;
+      </button>
+
+      <!-- Hero Slider Pagination Dots -->
+      <div id="hero-slider-dots" class="absolute bottom-8 flex justify-center space-x-2 z-20">
+        <!-- Dots will be injected by JavaScript -->
       </div>
     </section>
 
     <!-- Join Us Section -->
     <section class="py-16 bg-gray-50 rounded-2xl shadow-inner mt-12 mx-4 md:mx-auto">
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">
-          Ready to Get Involved?
+        <h2 class="text-3xl md:text-4xl font-bold mb-12 text-blue-900">
+          Бидний нэг болох уу?
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <div
             class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
-            <!-- Icon placeholder - consider using a proper icon library like Lucide or Font Awesome for professional icons -->
             <img src="../image/hand.png" alt="hand icon" class="h-16 w-16 mb-4 text-blue-600" />
             <h3 class="text-2xl font-semibold mb-4 text-blue-700">
-              I'm a Volunteer
+              Би сайн дурын ажилтан болмоор байна.
             </h3>
             <p class="mb-6 text-gray-600 leading-relaxed">
-              Ready to make a difference? Join our community of passionate
-              volunteers and help create positive change in your area.
+              Бидэнтэй нэгдэж нийгэмдээ эерэг өөрчлөлт авчрах мянга мянган залуусын нэг нь болоорой.
             </p>
             <a
               href="/volunteer"
               class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
             >
-              Sign Up to Volunteer
+              Нэгдэх
             </a>
           </div>
           <div
             class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
-            <!-- Icon placeholder - consider using a proper icon library like Lucide or Font Awesome for professional icons -->
             <img src="../image/company.png" alt="organization icon" class="h-16 w-16 mb-4 text-pink-600" />
             <h3 class="text-2xl font-semibold mb-4 text-pink-700">
-              I'm an Organization
+              Бид сайн дурын ажилтан хайж байна.
             </h3>
             <p class="mb-6 text-gray-600 leading-relaxed">
-              Looking for dedicated volunteers? Connect with motivated
-              individuals to support your cause and amplify your impact.
+              Сайн дурын ажилтнуудтай холбогдож, таны үйл ажиллагааг дэмжих хүсэлтэй хүмүүсийг олоорой.
             </p>
             <a
               href="/organization"
-              class="inline-block bg-pink-600 hover:bg-pink-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
+              class="inline-block bg-pink-600 hover:bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
             >
-              Find Volunteers
+              Нэгдэх
             </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Our Mission Section -->
-    <section class="py-16 bg-white text-gray-800 mt-12 mx-4 md:mx-auto rounded-2xl shadow-md">
-      <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-8">
-          Our Mission: Empowering Communities Through Action
-        </h2>
-        <p class="text-lg md:text-xl max-w-3xl mx-auto mb-12 leading-relaxed">
-          We connect dedicated volunteers with meaningful causes, driving
-          positive change in areas like education, environmental protection,
-          health, and social welfare. Every hour you give builds a stronger,
-          more compassionate society.
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div
-            class="p-6 bg-blue-50 rounded-lg shadow-md transform transition duration-300 hover:scale-105"
-          >
-            <h3 class="text-5xl font-extrabold text-blue-700 mb-2">500+</h3>
-            <p class="text-lg font-semibold text-gray-700">Lives Impacted</p>
-          </div>
-          <div
-            class="p-6 bg-pink-50 rounded-lg shadow-md transform transition duration-300 hover:scale-105"
-          >
-            <h3 class="text-5xl font-extrabold text-pink-700 mb-2">
-              1,200+
-            </h3>
-            <p class="text-lg font-semibold text-gray-700">Volunteer Hours</p>
-          </div>
-          <div
-            class="p-6 bg-purple-50 rounded-lg shadow-md transform transition duration-300 hover:scale-105"
-          >
-            <h3 class="text-5xl font-extrabold text-purple-700 mb-2">20+</h3>
-            <p class="text-lg font-semibold text-gray-700">Active Projects</p>
           </div>
         </div>
       </div>
@@ -133,7 +112,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section class="py-16 bg-gray-50 text-gray-800 mt-12 mx-4 md:mx-auto rounded-2xl shadow-inner">
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-10">
-          Hear From Our Volunteers
+          Тэдний түүх
         </h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <div
@@ -163,11 +142,103 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         </div>
         <a
           href="/stories"
-          class="mt-12 inline-block bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
+          class="mt-12 inline-block bg-blue-900 hover:bg-pink-500 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md"
         >
-          Read More Stories
+          Цааш унших
         </a>
       </div>
     </section>
   </main>
 </BaseLayout>
+
+<script>
+  // Hero Section Slideshow Logic
+  const heroImages = [
+    "../image/hero-volunteer.jpg",
+    "../image/volunteer.jpg", // Placeholder for second image
+    "../image/vo.jpg"  // Placeholder for third image
+  ];
+  const heroImageElement = document.getElementById('hero-background-image');
+  const heroPrevButton = document.getElementById('hero-prev-slide');
+  const heroNextButton = document.getElementById('hero-next-slide');
+  const heroSliderDotsContainer = document.getElementById('hero-slider-dots');
+
+  let currentHeroIndex = 0;
+  let heroInterval;
+
+  // Function to update the hero background image with a fade effect
+  function updateHeroImage() {
+    heroImageElement.style.opacity = '0'; // Start fade out
+    setTimeout(() => {
+      heroImageElement.src = heroImages[currentHeroIndex];
+      heroImageElement.style.opacity = '1'; // Fade in
+    }, 500); // Half of transition duration for smooth fade
+
+    updateHeroDots();
+  }
+
+  // Navigate to the next hero slide
+  function nextHeroSlide() {
+    currentHeroIndex = (currentHeroIndex + 1) % heroImages.length;
+    updateHeroImage();
+    resetHeroInterval(); // Reset interval on manual interaction
+  }
+
+  // Navigate to the previous hero slide
+  function prevHeroSlide() {
+    currentHeroIndex = (currentHeroIndex - 1 + heroImages.length) % heroImages.length;
+    updateHeroImage();
+    resetHeroInterval(); // Reset interval on manual interaction
+  }
+
+  // Render pagination dots for the hero slider
+  function renderHeroDots() {
+    heroSliderDotsContainer.innerHTML = '';
+    heroImages.forEach((_, index) => {
+      const dot = document.createElement('button');
+      dot.className = `w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white`;
+      dot.addEventListener('click', () => {
+        currentHeroIndex = index;
+        updateHeroImage();
+        resetHeroInterval(); // Reset interval on manual interaction
+      });
+      heroSliderDotsContainer.appendChild(dot);
+    });
+    updateHeroDots();
+  }
+
+  // Update the active state of hero pagination dots
+  function updateHeroDots() {
+    Array.from(heroSliderDotsContainer.children).forEach((dot, index) => {
+      if (index === currentHeroIndex) {
+        dot.classList.add('bg-white');
+        dot.classList.remove('bg-white/50');
+      } else {
+        dot.classList.remove('bg-white');
+        dot.classList.add('bg-white/50');
+      }
+    });
+  }
+
+  // Start automatic hero slide transition
+  function startHeroInterval() {
+    heroInterval = setInterval(nextHeroSlide, 5000); // Change slide every 5 seconds
+  }
+
+  // Reset the automatic interval (e.g., after manual navigation)
+  function resetHeroInterval() {
+    clearInterval(heroInterval);
+    startHeroInterval();
+  }
+
+  // Event Listeners for hero slider navigation
+  heroPrevButton.addEventListener('click', prevHeroSlide);
+  heroNextButton.addEventListener('click', nextHeroSlide);
+
+  // Initial setup for the hero slider when the DOM is ready
+  document.addEventListener('DOMContentLoaded', () => {
+    updateHeroImage();
+    renderHeroDots();
+    startHeroInterval();
+  });
+</script>

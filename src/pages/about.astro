@@ -2,67 +2,29 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="About Us - DoMore Mongolia">
+<BaseLayout title="Бидний тухай - DoMore Mongolia">
   <main class="container mx-auto py-12 px-4">
-    <!-- Our Mission Section -->
     <section class="mb-16 text-center mx-auto max-w-4xl">
       <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-950 drop-shadow-sm mb-4">
         Бидний зорилго
       </h1>
-      <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed mb-8">
+      <p class="text-balance md:text-2xl text-gray-700 font-medium leading-relaxed mb-8">
         <span class="font-bold text-3xl">"DoMore Mongolia"</span> нь Монголын ирээдүй болсон хүүхэд, залуусыг сайхан сэтгэл, идэвхитэй амьдралд уриалан нийгмийн сайн сайхны төлөөх сайн дурын үйлсийг түгээн дэмжиж сайн сайхны гүүр болох зорилготой.
       </p>
-      <p class="text-lg md:text-2xl text-gray-700 font-medium leading-relaxed">
+      <p class="text-balance md:text-2xl text-gray-700 font-medium leading-relaxed">
         <strong class="font-bold text-3xl">Бидний түүх:</strong> Бид Grow with Google Mongolia 2025 тэтгэлэгт хөтөлбөрийн хүрээнд танилцан энэхүү төсөлөө бүтээн байгуулж байна. Манай баг 6 гишүүнтэй. Гишүүн бүрийн түүхийг доорх хэсгээс сонирхоорой.
       </p>
     </section>
 
-    <!-- Core Values/Pillars Section -->
-    <section class="relative z-10 w-full bg-white rounded-3xl shadow-xl px-6 py-12 md:px-12 md:py-16 flex flex-col items-center text-center mt-12">
-      <div class="mb-10 max-w-3xl mx-auto">
-        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 drop-shadow-sm mb-4">
-          Our Core Values
-        </h2>
-        <p class="text-lg md:text-xl text-gray-700 opacity-90 leading-relaxed">
-          We believe in building a stronger Mongolia through these foundational principles.
-        </p>
-      </div>
-
-      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-        <!-- Community Section -->
-        <div class="flex-1 bg-white rounded-2xl p-8 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center">
-          <span class="text-5xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300 mb-4" aria-hidden="true">🤝</span>
-          <h3 class="text-2xl font-bold text-blue-800 mb-3">Community</h3>
-          <p class="text-gray-700 text-lg leading-relaxed">We connect people and organizations to create a supportive network for positive change.</p>
-        </div>
-
-        <!-- Volunteerism Section -->
-        <div class="flex-1 bg-white rounded-2xl p-8 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center">
-          <span class="text-5xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300 mb-4" aria-hidden="true">✨</span>
-          <h3 class="text-2xl font-bold text-blue-800 mb-3">Volunteerism</h3>
-          <p class="text-gray-700 text-lg leading-relaxed">We inspire action and participation, making it easy for everyone to contribute and grow.</p>
-        </div>
-
-        <!-- Sustainability Section -->
-        <div class="flex-1 bg-white rounded-2xl p-8 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center">
-          <span class="text-5xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300 mb-4" aria-hidden="true">🌱</span>
-          <h3 class="text-2xl font-bold text-blue-800 mb-3">Sustainability</h3>
-          <p class="text-gray-700 text-lg leading-relaxed">We focus on long-term impact, ensuring our efforts benefit future generations.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team Members Slider Section - Now showing 2 members, with stories -->
     <section class="py-16 bg-gray-50 rounded-2xl shadow-md mt-12 mx-4 md:mx-auto">
       <div class="container mx-auto px-4 text-center relative">
-        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900">Meet Our Team</h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900">Багийн гишүүд</h2>
 
-        <div class="relative w-full max-w-6xl mx-auto overflow-hidden rounded-xl shadow-lg">
+        <div class="relative w-full max-w-6xl mx-auto overflow-hidden rounded-xl">
           <div id="team-slider-track" class="flex transition-transform duration-500 ease-in-out">
-            <!-- Team Member Cards will be injected here by JavaScript -->
+
           </div>
 
-          <!-- Slider Navigation Buttons -->
           <button
             id="prev-slide"
             class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 hover:text-blue-600 p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
@@ -79,9 +41,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           </button>
         </div>
 
-        <!-- Pagination Dots -->
         <div id="slider-dots" class="flex justify-center space-x-2 mt-8">
-          <!-- Dots will be injected here by JavaScript -->
         </div>
       </div>
     </section>
