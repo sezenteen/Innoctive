@@ -2,33 +2,255 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Organization Sign Up - DoMore Mongolia">
-<main class="container mx-auto py-16 px-4 flex flex-col items-center bg-gradient-to-b from-white via-blue-50 to-blue-100 rounded-xl shadow-lg">
-    <div class="w-full max-w-3xl text-center mb-10">
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-4 text-blue-800 drop-shadow-lg">About Us</h1>
-        <p class="text-xl md:text-2xl text-blue-700 opacity-90">
-            Empowering Mongolia through volunteerism, community, and sustainable change.
-        </p>
-    </div>
-    <section class="w-full max-w-2xl bg-white bg-opacity-80 rounded-lg p-8 shadow-md">
-        <h2 class="text-3xl font-bold mb-3 text-blue-700">Our Mission</h2>
-        <p class="text-lg md:text-xl text-gray-700 mb-6">
-            DoMore Mongolia is dedicated to empowering individuals and communities through volunteerism, fostering a culture of giving back, and creating sustainable change across Mongolia. Join us in our mission to make a positive impact and build a brighter future for all.
-        </p>
-        <div class="flex flex-col md:flex-row gap-6 mt-8">
-            <div class="flex-1 bg-blue-50 rounded-lg p-6 shadow-sm">
-                <h3 class="text-xl font-semibold text-blue-800 mb-2">Community</h3>
-                <p class="text-gray-600">We connect people and organizations to create a supportive network for positive change.</p>
-            </div>
-            <div class="flex-1 bg-blue-50 rounded-lg p-6 shadow-sm">
-                <h3 class="text-xl font-semibold text-blue-800 mb-2">Volunteerism</h3>
-                <p class="text-gray-600">We inspire action and participation, making it easy for everyone to contribute and grow.</p>
-            </div>
-            <div class="flex-1 bg-blue-50 rounded-lg p-6 shadow-sm">
-                <h3 class="text-xl font-semibold text-blue-800 mb-2">Sustainability</h3>
-                <p class="text-gray-600">We focus on long-term impact, ensuring our efforts benefit future generations.</p>
-            </div>
-        </div>
+<BaseLayout title="About Us - DoMore Mongolia">
+  <main class="container mx-auto py-12 px-4">
+    <!-- Our Mission Section -->
+    <section class="mb-16 text-center mx-auto max-w-4xl">
+      <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-800 to-blue-950 drop-shadow-sm mb-4">
+        Бидний зорилго
+      </h1>
+      <p class="text-xl md:text-2xl text-gray-700 font-medium leading-relaxed mb-8">
+        <span class="font-bold text-3xl">"DoMore Mongolia"</span> нь Монголын ирээдүй болсон хүүхэд, залуусыг сайхан сэтгэл, идэвхитэй амьдралд уриалан нийгмийн сайн сайхны төлөөх сайн дурын үйлсийг түгээн дэмжиж сайн сайхны гүүр болох зорилготой.
+      </p>
+      <p class="text-lg md:text-2xl text-gray-700 font-medium leading-relaxed">
+        <strong class="font-bold text-3xl">Бидний түүх:</strong> Бид Grow with Google Mongolia 2025 тэтгэлэгт хөтөлбөрийн хүрээнд танилцан энэхүү төсөлөө бүтээн байгуулж байна. Манай баг 6 гишүүнтэй. Гишүүн бүрийн түүхийг доорх хэсгээс сонирхоорой.
+      </p>
     </section>
-</main>
+
+    <!-- Core Values/Pillars Section -->
+    <section class="relative z-10 w-full bg-white rounded-3xl shadow-xl px-6 py-12 md:px-12 md:py-16 flex flex-col items-center text-center mt-12">
+      <div class="mb-10 max-w-3xl mx-auto">
+        <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 drop-shadow-sm mb-4">
+          Our Core Values
+        </h2>
+        <p class="text-lg md:text-xl text-gray-700 opacity-90 leading-relaxed">
+          We believe in building a stronger Mongolia through these foundational principles.
+        </p>
+      </div>
+
+      <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
+        <!-- Community Section -->
+        <div class="flex-1 bg-white rounded-2xl p-8 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center">
+          <span class="text-5xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300 mb-4" aria-hidden="true">🤝</span>
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Community</h3>
+          <p class="text-gray-700 text-lg leading-relaxed">We connect people and organizations to create a supportive network for positive change.</p>
+        </div>
+
+        <!-- Volunteerism Section -->
+        <div class="flex-1 bg-white rounded-2xl p-8 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center">
+          <span class="text-5xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300 mb-4" aria-hidden="true">✨</span>
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Volunteerism</h3>
+          <p class="text-gray-700 text-lg leading-relaxed">We inspire action and participation, making it easy for everyone to contribute and grow.</p>
+        </div>
+
+        <!-- Sustainability Section -->
+        <div class="flex-1 bg-white rounded-2xl p-8 shadow-md border border-gray-200 hover:shadow-lg transition-all duration-300 group flex flex-col items-center text-center">
+          <span class="text-5xl text-blue-600 group-hover:text-blue-700 transition-colors duration-300 mb-4" aria-hidden="true">🌱</span>
+          <h3 class="text-2xl font-bold text-blue-800 mb-3">Sustainability</h3>
+          <p class="text-gray-700 text-lg leading-relaxed">We focus on long-term impact, ensuring our efforts benefit future generations.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team Members Slider Section - Now showing 2 members, with stories -->
+    <section class="py-16 bg-gray-50 rounded-2xl shadow-md mt-12 mx-4 md:mx-auto">
+      <div class="container mx-auto px-4 text-center relative">
+        <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900">Meet Our Team</h2>
+
+        <div class="relative w-full max-w-6xl mx-auto overflow-hidden rounded-xl shadow-lg">
+          <div id="team-slider-track" class="flex transition-transform duration-500 ease-in-out">
+            <!-- Team Member Cards will be injected here by JavaScript -->
+          </div>
+
+          <!-- Slider Navigation Buttons -->
+          <button
+            id="prev-slide"
+            class="absolute top-1/2 left-4 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 hover:text-blue-600 p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Previous team member"
+          >
+            &#10094;
+          </button>
+          <button
+            id="next-slide"
+            class="absolute top-1/2 right-4 -translate-y-1/2 bg-white/80 hover:bg-white text-gray-800 hover:text-blue-600 p-3 rounded-full shadow-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            aria-label="Next team member"
+          >
+            &#10095;
+          </button>
+        </div>
+
+        <!-- Pagination Dots -->
+        <div id="slider-dots" class="flex justify-center space-x-2 mt-8">
+          <!-- Dots will be injected here by JavaScript -->
+        </div>
+      </div>
+    </section>
+  </main>
 </BaseLayout>
+
+<script>
+  // Team member data with added stories
+  const teamMembers = [
+    {
+      name: "Болор-Эрдэнэ",
+      role: "IT Automation with Python",
+      image: "../image/member1.jpg",
+      story: "Болор-Эрдэнэ нь Python програмчлалын автоматжуулалттай ажилладаг. Тэрээр нийгмийн сайн сайхны төлөөх төслүүдэд идэвхтэй оролцдог."
+    },
+    {
+      name: "Мөнгөнхишиг",
+      role: "Cybersecurity",
+      image: "../image/member2.jpg",
+      story: "Мөнгөнхишиг нь кибер аюулгүй байдлын мэргэжилтэн бөгөөд нийгмийн мэдээллийн аюулгүй байдлыг хангахад анхаардаг."
+    },
+    {
+      name: "Энхжин",
+      role: "Digital Marketing & E-commerce",
+      image: "../image/member1.jpg",
+      story: "Энхжин нь дижитал маркетинг, цахим худалдааны чиглэлээр ажилладаг. Тэрээр нийгмийн сайн сайхны төлөөх төслүүдэд идэвхтэй оролцдог."
+    },
+    {
+      name: "Удвал",
+      role: "Digital Marketing & E-commerce",
+      image: "../image/member1.jpg",
+      story: "Удвал нь дижитал маркетинг, цахим худалдааны чиглэлээр ажилладаг. Тэрээр нийгмийн сайн сайхны төлөөх төслүүдэд идэвхтэй оролцдог."
+    },
+    {
+      name: "Золзаяа",
+      role: "Cybersecurity",
+      image: "../image/member2.jpg",
+      story: "Золзаяа нь кибер аюулгүй байдлын мэргэжилтэн бөгөөд нийгмийн мэдээллийн аюулгүй байдлыг хангахад анхаардаг."
+    },
+    {
+      name: "Урангуа",
+      role: "Advanced Data Analytics",
+      image: "../image/member1.jpg",
+      story: "Урангуа нь дээд түвшний өгөгдлийн шинжилгээний мэргэжилтэн бөгөөд нийгмийн сайн сайхны төлөөх төслүүдэд өгөгдлийн анализ хийдэг."
+    }
+  ];
+
+  const sliderTrack = document.getElementById('team-slider-track');
+  const prevButton = document.getElementById('prev-slide');
+  const nextButton = document.getElementById('next-slide');
+  const sliderDotsContainer = document.getElementById('slider-dots');
+
+  let currentIndex = 0;
+
+  // Function to render team members
+  function renderTeamMembers() {
+    sliderTrack.innerHTML = ''; // Clear existing
+    teamMembers.forEach((member) => {
+      const memberCard = document.createElement('div');
+      // Adjusted width for responsiveness: 1 on mobile, 2 on md/lg screens
+      memberCard.className = `flex-none w-full md:w-1/2 p-4 box-border`;
+      memberCard.innerHTML = `
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center h-full text-center">
+          <img src="${member.image}" alt="${member.name}" class="w-40 h-40 rounded-full object-cover mb-4 border-4 border-blue-200">
+          <h3 class="text-xl font-semibold text-gray-900 mb-1">${member.name}</h3>
+          <p class="text-blue-600 text-md mb-4">${member.role}</p>
+          <p class="text-gray-700 text-base leading-relaxed">${member.story}</p>
+        </div>
+      `;
+      sliderTrack.appendChild(memberCard);
+    });
+    updateSliderPosition();
+    renderDots();
+  }
+
+  // Function to update slider position
+  function updateSliderPosition() {
+    // Calculate how many items to show based on screen size
+    let itemsToShow = 1; // Default for mobile
+    if (window.innerWidth >= 768) { // md breakpoint and above
+      itemsToShow = 2;
+    }
+
+    const totalSlides = teamMembers.length;
+    const maxIndex = Math.max(0, totalSlides - itemsToShow);
+
+    // Ensure currentIndex doesn't exceed maxIndex
+    if (currentIndex > maxIndex) {
+      currentIndex = maxIndex;
+    }
+
+    const firstCard = sliderTrack.children[0];
+    const slideWidth = firstCard ? firstCard.offsetWidth : 0;
+
+    const offset = -currentIndex * slideWidth;
+    sliderTrack.style.transform = `translateX(${offset}px)`;
+
+    updateDots();
+  }
+
+  // Function to navigate to the next slide
+  function nextSlide() {
+    let itemsToShow = 1;
+    if (window.innerWidth >= 768) itemsToShow = 2;
+
+    const maxIndex = Math.max(0, teamMembers.length - itemsToShow);
+    currentIndex = (currentIndex + 1 <= maxIndex) ? currentIndex + 1 : 0; // Loop back to start
+    updateSliderPosition();
+  }
+
+  // Function to navigate to the previous slide
+  function prevSlide() {
+    let itemsToShow = 1;
+    if (window.innerWidth >= 768) itemsToShow = 2;
+
+    const maxIndex = Math.max(0, teamMembers.length - itemsToShow);
+    currentIndex = (currentIndex - 1 >= 0) ? currentIndex - 1 : maxIndex; // Loop to end
+    updateSliderPosition();
+  }
+
+  // Function to render pagination dots
+  function renderDots() {
+    sliderDotsContainer.innerHTML = '';
+    let itemsToShow = 1;
+    if (window.innerWidth >= 768) itemsToShow = 2;
+
+    const numDots = Math.ceil(teamMembers.length / itemsToShow);
+
+    for (let i = 0; i < numDots; i++) {
+      const dot = document.createElement('button');
+      dot.className = `w-3 h-3 rounded-full bg-gray-400 hover:bg-blue-500 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500`;
+      dot.dataset.index = (i * itemsToShow).toString(); // Each dot represents a "page" of items
+      dot.addEventListener('click', () => {
+        currentIndex = parseInt(dot.dataset.index);
+        updateSliderPosition();
+      });
+      sliderDotsContainer.appendChild(dot);
+    }
+    updateDots();
+  }
+
+  // Function to update active dot
+  function updateDots() {
+    const dots = sliderDotsContainer.children;
+    Array.from(dots).forEach((dot) => {
+      const dotRepresentsIndex = parseInt(dot.dataset.index);
+      if (dotRepresentsIndex === currentIndex) {
+        dot.classList.add('bg-blue-600');
+        dot.classList.remove('bg-gray-400');
+      } else {
+        dot.classList.remove('bg-blue-600');
+        dot.classList.add('bg-gray-400');
+      }
+    });
+  }
+
+  // Event Listeners
+  prevButton.addEventListener('click', prevSlide);
+  nextButton.addEventListener('click', nextSlide);
+
+  // Use a debounce for resize to prevent excessive re-renders
+  let resizeTimeout;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+      renderTeamMembers(); // Re-render and update position on resize
+    }, 250); // Debounce by 250ms
+  });
+
+  // Initial render on DOMContentLoaded
+  document.addEventListener('DOMContentLoaded', renderTeamMembers);
+</script>
