@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Login - DoMore Mongolia">
+  <main class="container mx-auto px-4">
+
+    <!-- Login Form Section -->
+    <section class="py-8 bg-gray-50 rounded-2xl shadow-inner mt-12 mx-4 md:mx-auto">
+      <div class="container mx-auto px-4">
+        <div class="max-w-md mx-auto bg-white rounded-xl shadow-lg p-8 md:p-12">
+          <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">
+            Нэвтрэх
+          </h2>
+          <form class="space-y-6">
+            <div>
+              <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">Цахим шуудан</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="you@example.com"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                required
+              />
+            </div>
+            <div>
+              <label for="password" class="block text-gray-700 text-sm font-semibold mb-2">Нууц үг</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Нууц үгээ оруулна уу"
+                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-200"
+                required
+              />
+            </div>
+            <div class="flex items-center justify-between">
+              <label class="flex items-center space-x-2">
+                <input type="checkbox" name="rememberMe" class="form-checkbox text-blue-600 rounded" />
+                <span class="text-gray-700 text-sm">Сануулах</span>
+              </label>
+              <a href="/forgot-password" class="text-blue-600 hover:underline text-sm font-semibold">Нууц үг мартсан</a>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300 ease-in-out transform hover:scale-105 shadow-md mt-6"
+            >
+              Нэвтрэх
+            </button>
+          </form>
+          <p class="text-center text-gray-600 text-sm mt-6">
+            Хаяггүй юу? <a href="/organization" class="text-blue-600 hover:underline font-semibold">Бүртгүүлэх</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
