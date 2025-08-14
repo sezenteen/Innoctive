@@ -2,14 +2,14 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout title="Volunteer Opportunities - DoMore Mongolia">
+<BaseLayout title="Events - DoMore Mongolia">
   <main class="container mx-auto py-12 px-4">
-    <section class="mx-16">
+    <section class="mx-18">
       <h1 class="text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-900 to-pink-400 drop-shadow-sm mb-4">
-        Сайн дурын ажлууд
+        Хөтөлбөрүүд
       </h1>
       <p class="text-balance md:text-2xl text-gray-700 font-medium leading-relaxed mb-8">
-        Өөрийн нийгэмдээ эерэг өөрчлөлт авчрах боломжтой сайн дурын ажлуудыг хайж олоорой. Бидний гишүүдийн түүхийг уншиж, тэдний нийгмийн сайн сайхны төлөөх үйлсийг хэрхэн бүтээж байгааг уншаарай.
+        Мэрэгжил сурталчлах хөтөлбөр, Сурагчдын хөгжлийн хөтөлбөр, Нийгмийн сайн сайхны төлөөх үйлс зэрэг олон төрлийн хөтөлбөрүүд.
       </p>
     </section>
 
@@ -17,7 +17,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     <section class="py-16 bg-gray-50 rounded-2xl shadow-inner mt-12 mx-4 md:mx-auto">
       <div class="container mx-auto text-center relative">
         <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900">
-          Сүүлд нийтлэгдсэн сайн дурын ажлууд
+          Сүүлд нийтлэгдсэн хөтөлбөрүүд
         </h2>
 
         <div class="relative w-full max-w-7xl mx-auto overflow-hidden rounded-xl">
@@ -55,59 +55,70 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   // Opportunity data
   const opportunities = [
     {
-      title: "Олон нийтийн цэвэрлэгээний өдөр",
-      organization: "Green Earth Mongolia",
-      description: "Бидний орчныг цэвэр, эрүүл байлгахын тулд хамтдаа цэвэрлэгээ хийх өдөр. Бидний нийгэмд эерэг нөлөө үзүүлцгээе.",
-      location: "Ulaanbaatar Parks",
-      image: "../image/volunteer.jpg",
-      duration: " (8 сарын 29)",
-      category: "Хүрээлэн буй орчин, Олон нийт",
-      link: "/opportunities/environmental-cleanup",
+      title: "Эмчийн мэргэжил сурталчлах хөтөлбөр",
+      organization: "Green Health Mongolia",
+      description: "Анагаах ухааны мэргэжилтнүүдийн өдөр тутмын ажлыг танилцуулж, сурагчдад эмч мэргэжлийг сонгоход туслах хөтөлбөр. Дунд болон ахлах ангийн сурагчдад зориулсан хөтөлбөр.",
+      location: "Green Health Hospital, Ulaanbaatar",
+      image: "../image/hospital.jpg",
+      duration: "Нэг өдрийн хөтөлбөр (8 сарын 20, 10:00-16:00)",
+      category: "Эрүүл мэнд, Олон нийт",
+      link: "/events/medical-career",
       color: "blue"
     },
     {
-      title: "After-School хичээл заах хөтөлбөр",
+      title: "Шинэ төгсөгчдөд зориулсан оюутан хөгжлийн хөтөлбөр",
       organization: "Bright Futures Education",
-      description: "Сурагчдын хоцрогдлыг арилгах, нэмэлт дэмжлэг үзүүлэх зорилготой хичээл заах сайн дурын ажил.",
+      description: "Оюутан амьдралын ур чадвар, карьер төлөвлөлт, сэтгэл зүйн дэмжлэгийг санал болгодог хөтөлбөр.",
       location: "Community Learning Centers",
-      image: "../image/teach.jpg",
-      duration: "7 хоног бүр (3-4 цаг)",
-      category: "Боловсрол, Хүүхэд",
-      link: "/opportunities/tutoring-program",
+      image: "../image/student.jpg",
+      duration: "7 хоног бүр (2-3 цаг)",
+      category: "Боловсрол, Хувь хүний хөгжил",
+      link: "/events/student-development",
       color: "green"
     },
     {
-      title: "Ахмадын асрамжийн төвд сайн дурын ажил",
-      organization: "Golden Age Support",
-      description: "Ахмад настнуудад туслах, тэдний өдөр тутмын хэрэгцээг хангах, тэдэнтэй цагийг өнгөрөөх сайн дурын ажил.",
-      location: "Senior Centers & Homes",
-      image: "../image/care.jpg",
-      duration: "7 хоног бүр (4-5 цаг)",
-      category: "Боловсрол, Ахмад настан",
-      link: "/opportunities/elderly-care",
+      title: "Уран зургийн хөтөлбөр",
+      organization: "Golden color art gallery",
+      description: "Уран зургийн авьяас чадвараа хөгжүүлэх, бүтээлээ танилцуулах боломжийг олгох хөтөлбөр.",
+      location: "Golden Color Art Gallery",
+      image: "../image/draw.jpg",
+      duration: "Чөлөөтэй (7 хоног бүр)",
+      category: "Урлаг, Соёл",
+      link: "/events/art-program",
       color: "pink"
     },
     {
-      title: "Амьтдын асрамжийн төвд туслах",
+      title: "Тэжээвэр амьmg;mga харьцаж сурцгаая! хөтөлбөр",
       organization: "Mongolian Animal Welfare",
-      description: "Тэжээвэр амьтдын асрамж, халамжийг сайжруулах зорилготой сайн дурын ажил.",
+      description: "Шинэхэн эзэд, хүүхэд багачуудыг тэжээвэр амьтантай харьцах, асрах талаар сургах хөтөлбөр. Амьтдын халамж, хайр энхрийлэлд суралцах боломж.",
       location: "Ulaanbaatar Animal Shelter",
-      image: "../image/assist.jpg",
-      duration: "7 хоног бүр (6 цаг)",
-      category: "Амьтны халамж, Олон нийт",
-      link: "/opportunities/animal-shelter",
+      image: "../image/animal.jpg",
+      duration: "Сар бүр (4 цаг үргэлжлэнэ)",
+      category: "Амьтны халамж, Боловсрол",
+      link: "/events/animal-shelter",
       color: "blue"
     },
     {
-      title: "Digital Literacy Workshop Facilitator",
-      organization: "Tech for All Mongolia",
-      description: "Teach basic computer skills and internet safety to underserved communities. Empower individuals with essential digital knowledge.",
-      location: "Various Community Centers",
-      image: "../image/environmental_cleanup.jpg",
-      duration: "Bi-weekly workshops",
-      category: "Education, Technology",
-      link: "/opportunities/digital-literacy",
+      title: "Одон орон судлалын хөтөлбөр",
+      organization: "Student Astronomy Club",
+      description: "Одон орон судлалын үндсэн ойлголт, оддын судалгаа, тэдгээрийн нөлөөллийг танилцуулах хөтөлбөр. Сурагчдад шинжлэх ухааны сонирхлыг төрүүлэх зорилготой.",
+      location: "National Planetarium",
+      image: "../image/star.jpg",
+      duration: "7 хоног бүр (4 цаг үргэлжлэнэ)",
+      category: "Шинжлэх ухаан, Боловсрол",
+      link: "/events/astronomy-program",
       color: "purple"
+    },
+    {
+      title: "Cultural Heritage Preservation",
+      organization: "Mongolian Heritage Keepers",
+      description: "Assist in documenting, preserving, and promoting Mongolia's rich cultural heritage. A unique opportunity for history enthusiasts.",
+      location: "Museums & Historical Sites",
+      image: "../image/environmental_cleanup.jpg",
+      duration: "Project-based",
+      category: "Culture, History",
+      link: "/opportunities/cultural-heritage",
+      color: "teal"
     }
   ];
 

@@ -16,8 +16,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </p>
     </section>
 
-    <section class="py-16 bg-gray-50 rounded-2xl shadow-md mt-12 mx-4 md:mx-auto">
-      <div class="container mx-auto px-4 text-center relative">
+    <section class="py-16 bg-gray-50 rounded-2xl shadow-md mt-12 md:mx-auto">
+      <div class="container mx-auto px-2 text-center relative">
         <h2 class="text-3xl md:text-4xl font-bold mb-10 text-gray-900">Багийн гишүүд</h2>
 
         <div class="relative w-full max-w-6xl mx-auto overflow-hidden rounded-xl">
@@ -52,22 +52,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   // Team member data with added stories
   const teamMembers = [
     {
+      name: "Энхжин",
+      role: "Digital Marketing & E-commerce",
+      image: "../image/member1.jpg",
+      story: "Энэ төслийн санаачлагч, төслийн менежер. Тэрээр дижитал маркетинг, цахим худалдааны чиглэлээр мэргэшсэн."
+    },
+    {
       name: "Болор-Эрдэнэ",
       role: "IT Automation with Python",
-      image: "../image/member1.jpg",
-      story: "Болор-Эрдэнэ нь Python програмчлалын автоматжуулалттай ажилладаг. Тэрээр нийгмийн сайн сайхны төлөөх төслүүдэд идэвхтэй оролцдог."
+      image: "../image/member.jpg",
+      story: "Программ хангамж мэргэжилээр суралцдаг. Төгсөх курсийн оюутан. Одоогоор 4 төсөл дээр fullstack болон front-end хөгжүүлэгчээр ажилласан туршлагатай. Мөн сургалтын газар туслах багш хийдэг. Цааш Game developer болох хүсэлтэй. "
     },
     {
       name: "Мөнгөнхишиг",
       role: "Cybersecurity",
-      image: "../image/member2.jpg",
-      story: "Мөнгөнхишиг нь кибер аюулгүй байдлын мэргэжилтэн бөгөөд нийгмийн мэдээллийн аюулгүй байдлыг хангахад анхаардаг."
-    },
-    {
-      name: "Энхжин",
-      role: "Digital Marketing & E-commerce",
-      image: "../image/member1.jpg",
-      story: "Энхжин нь дижитал маркетинг, цахим худалдааны чиглэлээр ажилладаг. Тэрээр нийгмийн сайн сайхны төлөөх төслүүдэд идэвхтэй оролцдог."
+      image: "../image/member3.jpg",
+      story: "Веб хөгжүүлэгч мэргэжлээр 2 жил ажилласан туршлагатай. Аниме үзэх, видео тоглоом тоглох, ном унших хоббитой. Голчлон англи хэл дээр ном унших их дуртай. 「現実は百ぱバグってる」 гэдэг үгэнд дуртай. Мөн японы Икигай үзлийг амьдралдаа баримтлахыг их хичээдэг. Дуртай аниме гэвэл “Charlotte”."
     },
     {
       name: "Удвал",
@@ -78,8 +78,8 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     {
       name: "Золзаяа",
       role: "Cybersecurity",
-      image: "../image/member2.jpg",
-      story: "Золзаяа нь кибер аюулгүй байдлын мэргэжилтэн бөгөөд нийгмийн мэдээллийн аюулгүй байдлыг хангахад анхаардаг."
+      image: "../image/member5.jpg",
+      story: "Эрх зүйч мэргэжилтэй хуульч, өмгөөлөгчөөр ажилладаг. Website front-end back-end Fullstack developer-оор сурч байсан. Вебсайт хөгжүүлэх сонирхолтой бөгөөд Кибер аюулгүй байдлын чиглэлээр мэргэшиж байгаа. "
     },
     {
       name: "Урангуа",
@@ -107,7 +107,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
         <div class="bg-white rounded-xl shadow-md p-6 flex flex-col items-center h-full text-center">
           <img src="${member.image}" alt="${member.name}" class="w-40 h-40 rounded-full object-cover mb-4 border-4 border-blue-200">
           <h3 class="text-xl font-semibold text-gray-900 mb-1">${member.name}</h3>
-          <p class="text-blue-600 text-md mb-4">${member.role}</p>
+          <p class="text-blue-600 text-md mb-4">Анги: ${member.role}</p>
           <p class="text-gray-700 text-base leading-relaxed">${member.story}</p>
         </div>
       `;
