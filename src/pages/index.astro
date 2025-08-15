@@ -31,20 +31,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           Илүү ихийг бүтээцгээе
         </h1>
         <p class="text-lg md:text-2xl mb-8 opacity-90 animate-pulse">
-          Бидэнтэй нэгдэж нийгэмдээ эерэг өөрчлөлт авчрах мянга мянган залуусын нэг болоорой.
+          Бидэнтэй нэгдэж нийгэмдээ эерэг өөрчлөлт авчрах мянга мянган залуусын
+          нэг болоорой.
         </p>
-        <a
-          href="/events"
-          class="bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
-        >
-          Хөтөлбөр сонирхох
-        </a>
-        <a
-          href="/opportunities"
-          class="bg-white mt-5 text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
-        >
-          Сайн дурын ажил сонирхох
-        </a>
+        <div class="grid gap-2">
+          <a
+            href="/events"
+            class="bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+          >
+            Хөтөлбөр
+          </a>
+          <a
+            href="/opportunities"
+            class="bg-white text-blue-800 hover:bg-blue-50 font-bold py-3 px-8 rounded-full text-lg md:text-xl transition duration-300 ease-in-out transform hover:scale-105 shadow-lg"
+          >
+            Сайн дурын ажил
+          </a>
+        </div>
       </div>
 
       <!-- Hero Slider Navigation Buttons -->
@@ -64,13 +67,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
       </button>
 
       <!-- Hero Slider Pagination Dots -->
-      <div id="hero-slider-dots" class="absolute bottom-8 flex justify-center space-x-2 z-20">
+      <div
+        id="hero-slider-dots"
+        class="absolute bottom-8 flex justify-center space-x-2 z-20"
+      >
         <!-- Dots will be injected by JavaScript -->
       </div>
     </section>
 
     <!-- Join Us Section -->
-    <section class="py-16 bg-gray-50 rounded-2xl shadow-inner mt-12 mx-4 md:mx-auto">
+    <section
+      class="py-16 bg-gray-50 rounded-2xl shadow-inner mt-12 mx-4 md:mx-auto"
+    >
       <div class="container mx-auto px-4 text-center">
         <h2 class="text-3xl md:text-4xl font-bold mb-12 text-blue-900">
           Бидний нэг болох уу?
@@ -79,12 +87,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div
             class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
-            <img src="../image/hand.png" alt="hand icon" class="h-16 w-16 mb-4 text-blue-600" />
+            <img
+              src="../image/hand.png"
+              alt="hand icon"
+              class="h-16 w-16 mb-4 text-blue-600"
+            />
             <h3 class="text-2xl font-semibold mb-4 text-blue-700">
               Би би танай гишүүн болмоор байна.
             </h3>
             <p class="mb-6 text-gray-600 leading-relaxed">
-              Бидэнтэй нэгдэж нийгэмдээ эерэг өөрчлөлт авчрах мянга мянган залуусын нэг нь болоорой.
+              Бидэнтэй нэгдэж нийгэмдээ эерэг өөрчлөлт авчрах мянга мянган
+              залуусын нэг нь болоорой.
             </p>
             <a
               href="/student"
@@ -96,12 +109,17 @@ import BaseLayout from "../layouts/BaseLayout.astro";
           <div
             class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
           >
-            <img src="../image/company.png" alt="organization icon" class="h-16 w-16 mb-4 text-pink-600" />
+            <img
+              src="../image/company.png"
+              alt="organization icon"
+              class="h-16 w-16 mb-4 text-pink-600"
+            />
             <h3 class="text-2xl font-semibold mb-4 text-pink-700">
               Бид хамтарч ажилламаар байна.
             </h3>
             <p class="mb-6 text-gray-600 leading-relaxed">
-              Сайн дурын ажилтнуудтай холбогдож, таны үйл ажиллагааг дэмжих хүсэлтэй хүмүүсийг олоорой.
+              Сайн дурын ажилтнуудтай холбогдож, таны үйл ажиллагааг дэмжих
+              хүсэлтэй хүмүүсийг олоорой.
             </p>
             <a
               href="/organization"
@@ -115,11 +133,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </section>
 
     <!-- Testimonials Section -->
-    <section class="py-16 bg-gray-50 text-gray-800 mt-12 mx-4 md:mx-auto rounded-2xl shadow-inner">
+    <section
+      class="py-16 bg-gray-50 text-gray-800 mt-12 mx-4 md:mx-auto rounded-2xl shadow-inner"
+    >
       <div class="container mx-auto px-4 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold mb-10">
-          Тэдний түүх
-        </h2>
+        <h2 class="text-3xl md:text-4xl font-bold mb-10">Тэдний түүх</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
           <div
             class="p-8 bg-white rounded-xl shadow-lg border-l-4 border-blue-600 flex flex-col justify-between transform transition duration-300 hover:-translate-y-1 hover:shadow-xl"
@@ -156,22 +174,67 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </section>
 
     <section>
-      <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">Хамтрагч байгууллагууд</h2>
+      <h2 class="text-3xl font-bold mb-8 text-gray-900 text-center">
+        Хамтрагч байгууллагууд
+      </h2>
       <div>
         <div class="grid grid-cols-2 md:grid-cols-5 gap-6">
-          <img src="../image/company.png" alt="Partner 1" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company1.png" alt="Partner 2" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company2.png" alt="Partner 3" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company3.png" alt="Partner 4" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company4.png" alt="Partner 4" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company5.png" alt="Partner 4" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company6.png" alt="Partner 4" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company7.png" alt="Partner 4" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company8.png" alt="Partner 4" class="h-16 w-auto object-contain mx-auto my-8" />
-          <img src="../image/company9.png" alt="Partner 4" class="h-16 w-auto object-contain mx-auto my-8" />
+          <img
+            src="../image/company.png"
+            alt="Partner 1"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company1.png"
+            alt="Partner 2"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company2.png"
+            alt="Partner 3"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company3.png"
+            alt="Partner 4"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company4.png"
+            alt="Partner 4"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company5.png"
+            alt="Partner 4"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company6.png"
+            alt="Partner 4"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company7.png"
+            alt="Partner 4"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company8.png"
+            alt="Partner 4"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
+          <img
+            src="../image/company9.png"
+            alt="Partner 4"
+            class="h-16 w-auto object-contain mx-auto my-8"
+          />
         </div>
         <p class="text-center text-gray-600 mt-4 sm:p-9">
-          Бидэнтэй хамтран ажиллахыг хүсвэл <a href="/sign-up" class="text-blue-600 hover:underline">нэгдэх товч</a> дээр дарна уу.
+          Бидэнтэй хамтран ажиллахыг хүсвэл <a
+            href="/sign-up"
+            class="text-blue-600 hover:underline">нэгдэх товч</a
+          > дээр дарна уу.
         </p>
       </div>
     </section>
@@ -183,22 +246,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   const heroImages = [
     "../image/hero-volunteer.jpg",
     "../image/volunteer.jpg", // Placeholder for second image
-    "../image/vo.jpg"  // Placeholder for third image
+    "../image/vo.jpg", // Placeholder for third image
   ];
-  const heroImageElement = document.getElementById('hero-background-image');
-  const heroPrevButton = document.getElementById('hero-prev-slide');
-  const heroNextButton = document.getElementById('hero-next-slide');
-  const heroSliderDotsContainer = document.getElementById('hero-slider-dots');
+  const heroImageElement = document.getElementById("hero-background-image");
+  const heroPrevButton = document.getElementById("hero-prev-slide");
+  const heroNextButton = document.getElementById("hero-next-slide");
+  const heroSliderDotsContainer = document.getElementById("hero-slider-dots");
 
   let currentHeroIndex = 0;
   let heroInterval;
 
   // Function to update the hero background image with a fade effect
   function updateHeroImage() {
-    heroImageElement.style.opacity = '0'; // Start fade out
+    heroImageElement.style.opacity = "0"; // Start fade out
     setTimeout(() => {
       heroImageElement.src = heroImages[currentHeroIndex];
-      heroImageElement.style.opacity = '1'; // Fade in
+      heroImageElement.style.opacity = "1"; // Fade in
     }, 500); // Half of transition duration for smooth fade
 
     updateHeroDots();
@@ -213,18 +276,19 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
   // Navigate to the previous hero slide
   function prevHeroSlide() {
-    currentHeroIndex = (currentHeroIndex - 1 + heroImages.length) % heroImages.length;
+    currentHeroIndex =
+      (currentHeroIndex - 1 + heroImages.length) % heroImages.length;
     updateHeroImage();
     resetHeroInterval(); // Reset interval on manual interaction
   }
 
   // Render pagination dots for the hero slider
   function renderHeroDots() {
-    heroSliderDotsContainer.innerHTML = '';
+    heroSliderDotsContainer.innerHTML = "";
     heroImages.forEach((_, index) => {
-      const dot = document.createElement('button');
+      const dot = document.createElement("button");
       dot.className = `w-3 h-3 rounded-full bg-white/50 hover:bg-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-white`;
-      dot.addEventListener('click', () => {
+      dot.addEventListener("click", () => {
         currentHeroIndex = index;
         updateHeroImage();
         resetHeroInterval(); // Reset interval on manual interaction
@@ -238,11 +302,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   function updateHeroDots() {
     Array.from(heroSliderDotsContainer.children).forEach((dot, index) => {
       if (index === currentHeroIndex) {
-        dot.classList.add('bg-white');
-        dot.classList.remove('bg-white/50');
+        dot.classList.add("bg-white");
+        dot.classList.remove("bg-white/50");
       } else {
-        dot.classList.remove('bg-white');
-        dot.classList.add('bg-white/50');
+        dot.classList.remove("bg-white");
+        dot.classList.add("bg-white/50");
       }
     });
   }
@@ -259,11 +323,11 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
 
   // Event Listeners for hero slider navigation
-  heroPrevButton.addEventListener('click', prevHeroSlide);
-  heroNextButton.addEventListener('click', nextHeroSlide);
+  heroPrevButton.addEventListener("click", prevHeroSlide);
+  heroNextButton.addEventListener("click", nextHeroSlide);
 
   // Initial setup for the hero slider when the DOM is ready
-  document.addEventListener('DOMContentLoaded', () => {
+  document.addEventListener("DOMContentLoaded", () => {
     updateHeroImage();
     renderHeroDots();
     startHeroInterval();
